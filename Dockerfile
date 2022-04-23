@@ -1,4 +1,4 @@
-FROM alpine:3.9.4
+FROM --platform=linux/aarch64 alpine:3.9.4
 
 RUN apk -U add \
         git \
@@ -49,6 +49,7 @@ RUN apk -U add \
         soxr \
         avahi \
         libconfig \
+        bluez \
     && rm -rf \
         /etc/ssl \
         /var/cache/apk/* \
